@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -152,7 +151,7 @@ export default function Home({ projects }) {
                         ))}
                     </div>
                     <div className="content has-text-weight-semibold has-text-justified">
-                      <ReactMarkdown children={project.subtitle} />
+                      {project.subtitle}
                     </div>
                     <div className="has-text-centered">
                       <Link href={`/project/${project.slug}`} key={project.id}>

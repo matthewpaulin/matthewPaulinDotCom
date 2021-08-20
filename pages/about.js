@@ -50,13 +50,10 @@ export default function About({ about, languages, web, databases, other }) {
                     </h1>
                     <div className="is-flex is-flex-wrap-wrap">
                       {languages.map((tech) => (
-                        <span className="tech is-flex m-3" key={tech.name}>
+                        <div className="tech is-flex m-3" key={tech.name}>
                           <figure className={"image tech-img"}>
                             <Image
                               style={{
-                                borderTopLeftRadius: "12px",
-                                borderBottomLeftRadius: "12px",
-                                borderRight: "none",
                                 height: "64px",
                                 width: "auto",
                               }}
@@ -74,7 +71,7 @@ export default function About({ about, languages, web, databases, other }) {
                             }}>
                             {tech.name}
                           </p>
-                        </span>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -86,13 +83,10 @@ export default function About({ about, languages, web, databases, other }) {
                     </h1>
                     <div className="is-flex is-flex-wrap-wrap">
                       {web.map((tech) => (
-                        <span className="tech is-flex m-3" key={tech.name}>
+                        <div className="tech is-flex m-3" key={tech.name}>
                           <figure className={"image tech-img"}>
                             <Image
                               style={{
-                                borderTopLeftRadius: "12px",
-                                borderBottomLeftRadius: "12px",
-                                borderRight: "none",
                                 height: "64px",
                                 width: "auto",
                               }}
@@ -110,7 +104,7 @@ export default function About({ about, languages, web, databases, other }) {
                             }}>
                             {tech.name}
                           </p>
-                        </span>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -123,13 +117,10 @@ export default function About({ about, languages, web, databases, other }) {
                     </h1>
                     <div className="is-flex is-flex-wrap-wrap">
                       {databases.map((tech) => (
-                        <span className="tech is-flex m-3" key={tech.name}>
+                        <div className="tech is-flex m-3" key={tech.name}>
                           <figure className={"image tech-img"}>
                             <Image
                               style={{
-                                borderTopLeftRadius: "12px",
-                                borderBottomLeftRadius: "12px",
-                                borderRight: "none",
                                 height: "64px",
                                 width: "auto",
                               }}
@@ -147,7 +138,7 @@ export default function About({ about, languages, web, databases, other }) {
                             }}>
                             {tech.name}
                           </p>
-                        </span>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -159,13 +150,10 @@ export default function About({ about, languages, web, databases, other }) {
                     </h1>
                     <div className="is-flex is-flex-wrap-wrap">
                       {other.map((tech) => (
-                        <span className="tech is-flex m-3" key={tech.name}>
+                        <div className="tech is-flex m-3" key={tech.name}>
                           <figure className={"image tech-img"}>
                             <Image
                               style={{
-                                borderTopLeftRadius: "12px",
-                                borderBottomLeftRadius: "12px",
-                                borderRight: "none",
                                 height: "64px",
                                 width: "auto",
                               }}
@@ -183,7 +171,7 @@ export default function About({ about, languages, web, databases, other }) {
                             }}>
                             {tech.name}
                           </p>
-                        </span>
+                        </div>
                       ))}
                     </div>
                   </div>

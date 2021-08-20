@@ -128,14 +128,6 @@ export default [
         }
     },
      {
-        "name" : "Strapi",
-        "type": "web",
-        "icon": {
-            url: "https://i.ibb.co/zbVXjhP/strapi.png",
-            alternativeText: "Strapi logo"
-        }
-    },
-     {
         "name" : "WordPress",
         "type": "web",
         "icon": {
@@ -165,14 +157,6 @@ export default [
         "icon": {
             url: "https://i.ibb.co/r5rXdWR/SQL-Server.png",
             alternativeText: "Microsoft SQL Server logo"
-        }
-    },
-    {
-        "name" : "IBM Db2",
-        "type": "db",
-        "icon": {
-            url: "https://i.ibb.co/gdx3DSn/db2.png",
-            alternativeText: "IBM Db2 logo"
         }
     },
     {
