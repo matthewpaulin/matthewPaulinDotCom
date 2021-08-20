@@ -1,0 +1,146 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+#__next{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+@import "~bulma/sass/utilities/initial-variables.sass";
+$navbar-breakpoint: $tablet;
+@import "~bulma/bulma.sass";
+
+$pathLengths: 755, 507, 315, 315, 478, 516, 639, 450, 507, 423, 240, 240, 423;
+
+.fadein{
+  color: white;
+  opacity: 0;
+  animation: fadein 0.5s ease forwards 3.2s;
+}
+.glowing{
+  border-radius: 20%;
+  animation: pulse-white 2s infinite;
+}
+
+.hero-icon:hover{
+  background-color: $dark;
+}
+
+#name{
+  stroke-linecap: round;
+  overflow: visible;
+  @for $i from 1 through 13 {
+    path:nth-child(#{$i}n){
+      overflow: hidden;
+      stroke-dasharray: nth($pathLengths, $i);
+      stroke-dashoffset: nth($pathLengths, $i);
+      animation: lineFill 0.6s ease forwards #{($i) * 0.2}s, shapeFill 0.5s ease forwards 3.2s;
+    }
+  }
+}
+
+@keyframes lineFill { 
+  to{
+      stroke-dashoffset: 0;
+  } 
+}
+
+@keyframes shapeFill {
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: white;
+  }
+}
+@keyframes fadein {
+  to   { opacity: 1; }
+}
+
+@keyframes pulse-white {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+
+
+#home-page{ 
+  background-color: #e8ecf1;
+  }
+
+
+#scroll-icon{
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadein 0.5s ease forwards 3.2s, glowing 1300ms infinite;
+}
+#main-hero{
+  width: 100%;
+  // height: 75vh; 
+  background-image: url("/bg.svg");
+  background-size: cover;
+  // background: #43C6AC;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to top, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to top, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.current-page{
+  text-decoration: underline;
+}
+.project-thumb{
+  border: grey solid .1em;
+  border-radius: 1em;
+}
+.has-border{
+  border: black solid .3em;
+}
+.project-thumb:hover{
+  border: $link solid .3em;
+}
+.about-hr{
+  background-color: $link;
+  opacity: 0.5;
+}
+#about-pg{
+  ul{
+    list-style: disc;
+  }
+}
+.tech-img{
+  border: solid 1px rgba(0, 0, 0, 0.2);;
+  border-radius: 12px 0 0 12px
+}
+
+.rotating-icon{
+  transform: rotate(0deg);
+  transition: transform .1s linear;
+}
+
+.rotating-icon.open{
+  transform: rotate(180deg);
+  transition: transform .1s linear;
+}
+
+#wrapper{
+  flex: 1;
+}
