@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Image from "../components/Image";
-import projects from "./api/projectList";
+import projects from '../projectList';
 export default function Home({ projects }) {
   return (
     <div id="home-page">

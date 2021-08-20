@@ -2,6 +2,8 @@ import Image from "../components/Image";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import about from "../aboutPage";
+import categories from "../categoryList";
 export default function About({ about, languages, web, databases, other }) {
   const [skillsExpanded, setSkillsExpanded] = useState(true);
   const [experienceExpanded, setExperienceExpanded] = useState(true);
@@ -278,12 +280,6 @@ export default function About({ about, languages, web, databases, other }) {
 }
 
 export async function getStaticProps() {
-  const categoriesResponse = await fetch(
-    "http://localhost:3000/api/categories"
-  );
-  const aboutResponse = await fetch("http://localhost:3000/api/about");
-  const about = await aboutResponse.json();
-  const categories = await categoriesResponse.json();
   const languages = categories.filter((cat) => cat.type === "lang");
   const web = categories.filter((cat) => cat.type === "web");
   const databases = categories.filter((cat) => cat.type === "db");
