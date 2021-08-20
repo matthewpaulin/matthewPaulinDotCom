@@ -96,7 +96,7 @@ export default function Home({ projects }) {
               </a>
             </li>
             <li className="px-5">
-              <a href="http://github.com/Jon-Snow0">
+              <a href="https://github.com/matthewpaulin">
                 <span className="icon is-large has-text-light glowing hero-icon">
                   <FontAwesomeIcon icon={faGithubSquare} />
                 </span>

@@ -19,7 +19,7 @@ export const Footer = () => {
             </span>
           </a>
 
-          <a href="http://github.com/Jon-Snow0">
+          <a href="https://github.com/matthewpaulin">
             <span className="icon mx-4 has-text-light">
               <FontAwesomeIcon icon={faGithub} />
             </span>

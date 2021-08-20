@@ -228,9 +228,9 @@ export default function About({ about, languages, web, databases, other }) {
                     {about.education.date}
                   </span>
                 </p>
-                <p className="pl-3 is-size-4 has-text-weight-normal">
+                <li className="pl-3 is-size-4 has-text-weight-normal">
                   {about.education.gpa}
-                </p>
+                </li>
               </div>
             </>
           )}

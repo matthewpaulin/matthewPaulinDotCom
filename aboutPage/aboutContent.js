@@ -6,6 +6,10 @@ export default {
   },
   experience: [
     {
+      title: "Web Developer Summer Student - Minga",
+      date: "May 2021 – August 2021",
+    },
+    {
       title: "Jr. Web Developer - Digitcom Telecommunications",
       date: "June 2020 – August 2020",
     },

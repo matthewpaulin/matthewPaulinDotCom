@@ -17,6 +17,7 @@ body {
 
 @import "~bulma/sass/utilities/initial-variables.sass";
 $navbar-breakpoint: $tablet;
+$card-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 @import "~bulma/bulma.sass";
 
 $pathLengths: 755, 507, 315, 315, 478, 516, 639, 450, 507, 423, 240, 240, 423;
@@ -83,7 +84,12 @@ $pathLengths: 755, 507, 315, 315, 478, 516, 639, 450, 507, 423, 240, 240, 423;
   }
 }
 
-
+.card{
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+}
 
 #home-page{ 
   background-color: #e8ecf1;
@@ -130,6 +136,10 @@ $pathLengths: 755, 507, 315, 315, 478, 516, 639, 450, 507, 423, 240, 240, 423;
   border: solid 2px black;
   border-radius: 12px 0 0 12px;
   overflow: hidden;
+}
+.tech{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 12px;
 }
 
 .rotating-icon{
