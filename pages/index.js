@@ -3,20 +3,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Image from "../components/Image";
-import projects from '../projectList';
+import projects from "../projectList";
 export default function Home({ projects }) {
   return (
     <div id="home-page">
       <section
         id="main-hero"
-        className="is-flex is-flex-direction-column is-justify-content-center px-6 pt-6">
+        className="is-flex is-flex-direction-column is-justify-content-center px-6 pt-6"
+      >
         <div className="has-text-centered is-align-self-center">
           <svg
             id="name"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 1079 112"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               d="M101.896 10.352V110H88.792V35.696L55.672 110H46.456L13.192 35.552V110H0.0880127V10.352H14.2L51.064 92.72L87.928 10.352H101.896Z"
               stroke="white"
@@ -115,12 +117,14 @@ export default function Home({ projects }) {
       <section id="projects" className="container mb-3">
         <div
           className="columns is-multiline is-centered mt-4
-          is-justify-content-center">
+          is-justify-content-center"
+        >
           {projects &&
             projects.map((project) => (
               <div
-                className="column is-half-tablet is-full-mobile is-one-third-fullhd px-6"
-                key={project.id}>
+                className="column is-half-desktop is-full-tablet project-column"
+                key={project.id}
+              >
                 <div className="card" key={project.id}>
                   <header className="card-header">
                     <p className="card-header-title is-centered is-size-4">
@@ -128,9 +132,16 @@ export default function Home({ projects }) {
                     </p>
                   </header>
                   <div className="card-image">
-                    <figure className="image is-4by3">
+                    <figure className="image">
                       {(project.preview.url && (
-                        <Image image={project.preview} />
+                        <Image
+                          image={project.preview}
+                          style={{
+                            height: "350px",
+                            width: "auto",
+                            margin: "auto",
+                          }}
+                        />
                       )) || (
                         <img
                           src="https://bulma.io/images/placeholders/1280x960.png"
@@ -143,22 +154,33 @@ export default function Home({ projects }) {
                     <div className="tags">
                       {project &&
                         project.categories.map((cat, index) => (
-                          <span
-                            className="tag is-link is-medium"
-                            key={index}>
+                          <span className="tag is-link is-medium" key={index}>
                             {cat}
                           </span>
                         ))}
                     </div>
-                    <div className="content has-text-weight-semibold has-text-justified">
-                      {project.subtitle}
-                    </div>
-                    <div className="has-text-centered">
-                      <Link href={`/project/${project.slug}`} key={project.id}>
-                        <button className="button is-dark is-outlined">
-                          View Project
-                        </button>
-                      </Link>
+                    <div className="project-preview is-flex is-flex-direction-column is-justify-content-space-between">
+                      <div className="content has-text-weight-semibold has-text-justified">
+                        {project.subtitle}
+                      </div>
+                      <div className="has-text-centered">
+                        <Link
+                          href={`/project/${project.slug}`}
+                          key={project.id}
+                        >
+                          <button
+                            className="button is-dark is-outlined is-rounded"
+                            style={{ width: "100%" }}
+                          >
+                            View Project
+                          </button>
+                        </Link>
+                        {project.date && (
+                          <p className="has-text-right pt-2 is-size-7">
+                            {project.date}
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>

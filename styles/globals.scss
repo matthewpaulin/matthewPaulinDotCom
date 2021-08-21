@@ -9,7 +9,7 @@ body {
 * {
   box-sizing: border-box;
 }
-#__next{
+#__next {
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -17,54 +17,58 @@ body {
 
 @import "~bulma/sass/utilities/initial-variables.sass";
 $navbar-breakpoint: $tablet;
-$card-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$card-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$card-content-padding: 1.5rem 1.5rem 0.5rem 1.5rem;
 @import "~bulma/bulma.sass";
 
 $pathLengths: 755, 507, 315, 315, 478, 516, 639, 450, 507, 423, 240, 240, 423;
 
-.fadein{
+.fadein {
   color: white;
   opacity: 0;
-  animation: fadein 0.5s ease forwards 3.2s;
+  animation: fadein 0.5s ease forwards 2.45s;
 }
-.glowing{
+.glowing {
   border-radius: 20%;
   animation: pulse-white 2s infinite;
 }
 
-.hero-icon:hover{
+.hero-icon:hover {
   background-color: $dark;
 }
 
-#name{
+#name {
   stroke-linecap: round;
   overflow: visible;
   @for $i from 1 through 13 {
-    path:nth-child(#{$i}n){
+    path:nth-child(#{$i}n) {
       overflow: hidden;
       stroke-dasharray: nth($pathLengths, $i);
       stroke-dashoffset: nth($pathLengths, $i);
-      animation: lineFill 0.6s ease forwards #{($i) * 0.2}s, shapeFill 0.5s ease forwards 3.2s;
+      animation: lineFill 0.5s ease forwards #{($i) * 0.15}s,
+        shapeFill 0.5s ease forwards 2.45s;
     }
   }
 }
 
-@keyframes lineFill { 
-  to{
-      stroke-dashoffset: 0;
-  } 
+@keyframes lineFill {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes shapeFill {
-  from{
+  from {
     fill: transparent;
   }
-  to{
+  to {
     fill: white;
   }
 }
 @keyframes fadein {
-  to   { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes pulse-white {
@@ -72,86 +76,102 @@ $pathLengths: 755, 507, 315, 315, 478, 516, 639, 450, 507, 423, 240, 240, 423;
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   }
-  
+
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
   }
-  
+
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
 
-.card{
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  &:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.project-preview {
+  flex: 1;
 }
 
-#home-page{ 
-  background-color: #e8ecf1;
-  }
-
-
-#scroll-icon{
+#scroll-icon {
   border-radius: 50%;
   opacity: 0;
-  animation: fadein 0.5s ease forwards 3.2s, glowing 1300ms infinite;
+  animation: fadein 0.5s ease forwards 2.45s, glowing 1300ms infinite;
 }
-#main-hero{
+#main-hero {
   width: 100%;
-  // height: 75vh; 
+  // height: 75vh;
   background-image: url("/bg.svg");
   background-size: cover;
   // background: #43C6AC;  /* fallback for old browsers */
   // background: -webkit-linear-gradient(to top, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
   // background: linear-gradient(to top, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.current-page{
+.current-page {
   text-decoration: underline;
 }
-.project-thumb{
-  border: grey solid .1em;
+.project-thumb {
+  border: grey solid 0.1em;
   border-radius: 1em;
 }
-.has-border{
-  border: black solid .3em;
+.has-border {
+  border: black solid 0.3em;
 }
-.project-thumb:hover{
-  border: $link solid .3em;
+.project-thumb:hover {
+  border: $link solid 0.3em;
 }
-.about-hr{
-  background-color: $link;
+hr {
+  background-color: black;
   opacity: 0.5;
 }
-#about-pg{
-  ul{
+.about-hr {
+  background-color: $link;
+}
+#about-pg {
+  ul {
     list-style: disc;
   }
 }
-.tech-img{
+.tech-img {
   border: solid 2px black;
   border-radius: 12px 0 0 12px;
   overflow: hidden;
 }
-.tech{
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+.tech {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border-radius: 12px;
 }
 
-.rotating-icon{
+.rotating-icon {
   transform: rotate(0deg);
-  transition: transform .1s linear;
+  transition: transform 0.1s linear;
 }
 
-.rotating-icon.open{
+.rotating-icon.open {
   transform: rotate(180deg);
-  transition: transform .1s linear;
+  transition: transform 0.1s linear;
 }
 
-#wrapper{
+#wrapper {
+  background-color: #e8ecf1;
   flex: 1;
+}
+
+.project-column {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  @media only screen and (max-width: $tablet - 1) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
