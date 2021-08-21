@@ -135,7 +135,7 @@ export default function Home({ projects }) {
                             <Image
                               image={project.preview}
                               style={{
-                                height: "350px",
+                                maxHeight: "350px",
                                 width: "auto",
                                 margin: "auto",
                               }}

@@ -17,23 +17,10 @@ export default {
   subtitle:
     "Boardzilla is an app to create personalized dashboards constructed with a variety of customizable widgets.",
   slug: "boardzilla",
-  images: [
-    {
-      url: "https://i.ibb.co/pWJDthS/C.png",
-      alternativeText: "boardzilla preview",
-    },
-    {
-      url: "https://i.ibb.co/ggz2rDQ/java.png",
-      alternativeText: "boardzilla preview",
-    },
-    {
-      url: "https://i.ibb.co/pWJDthS/C.png",
-      alternativeText: "boardzilla preview",
-    },
-  ],
+  images: [],
   preview: {
-    url: "https://i.ibb.co/pWJDthS/C.png",
-    alternativeText: "boardzilla preview",
+    url: "https://i.ibb.co/ByDrHVL/logo.png",
+    alternativeText: "boardzilla logo",
   },
   categories: ["MongoDB", "Express.js", "React", "Redux", "Node.js"],
 };
