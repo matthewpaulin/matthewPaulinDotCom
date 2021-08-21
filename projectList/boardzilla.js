@@ -3,7 +3,7 @@ export default {
   id: "boardzilla",
   date: "2021",
   url: "",
-  github: "#",
+  github: "https://github.com/3A04-T2G10/Boardzilla",
   description:
     "Boardzilla is an online application that serves as a dashboard for a variety of \
     information meant to serve as a daily briefing or hub.  Each user has their own protected \
