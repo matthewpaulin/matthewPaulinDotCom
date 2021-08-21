@@ -166,12 +166,19 @@ hr {
   background-color: #e8ecf1;
   flex: 1;
 }
-
-.project-column {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  @media only screen and (max-width: $tablet - 1) {
-    padding-left: 0;
-    padding-right: 0;
+.project-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  @media only screen and (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr;
   }
+  @media only screen and (max-width: $desktop) and (min-width: $tablet) {
+    margin: 0 1em;
+  }
+  column-gap: 3rem;
+  row-gap: 3rem;
+}
+.project-column {
+  height: 100%;
 }

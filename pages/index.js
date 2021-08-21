@@ -4,8 +4,7 @@ import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Image from "../components/Image";
 import projects from "../projectList";
-import { motion } from "framer-motion";
-import { defaultVariants } from "../variants";
+import { AnimateWhenVisible } from "../components/AnimateWhenVisible";
 import { Main } from "../components/Main";
 export default function Home({ projects }) {
   return (
@@ -118,77 +117,76 @@ export default function Home({ projects }) {
             </ul>
           </div>
         </section>
-        <section id="projects" className="container mb-3">
-          <div
-            className="columns is-multiline is-centered mt-4
-          is-justify-content-center"
-          >
+        <section id="projects" className="container my-5">
+          <div className="project-columns">
             {projects &&
               projects.map((project) => (
-                <div
-                  className="column is-half-desktop is-full-tablet project-column"
-                  key={project.id}
-                >
-                  <div className="card" key={project.id}>
-                    <header className="card-header">
-                      <p className="card-header-title is-centered is-size-4">
-                        {project.title}
-                      </p>
-                    </header>
-                    <div className="card-image">
-                      <figure className="image">
-                        {(project.preview.url && (
-                          <Image
-                            image={project.preview}
-                            style={{
-                              height: "350px",
-                              width: "auto",
-                              margin: "auto",
-                            }}
-                          />
-                        )) || (
-                          <img
-                            src="https://bulma.io/images/placeholders/1280x960.png"
-                            alt="Placeholder image"
-                          />
-                        )}
-                      </figure>
-                    </div>
-                    <div className="card-content">
-                      <div className="tags">
-                        {project &&
-                          project.categories.map((cat, index) => (
-                            <span className="tag is-link is-medium" key={index}>
-                              {cat}
-                            </span>
-                          ))}
-                      </div>
-                      <div className="project-preview is-flex is-flex-direction-column is-justify-content-space-between">
-                        <div className="content has-text-weight-semibold has-text-justified">
-                          {project.subtitle}
-                        </div>
-                        <div className="has-text-centered">
-                          <Link
-                            href={`/project/${project.slug}`}
-                            key={project.id}
-                          >
-                            <button
-                              className="button is-dark is-outlined is-rounded"
-                              style={{ width: "100%" }}
-                            >
-                              View Project
-                            </button>
-                          </Link>
-                          {project.date && (
-                            <p className="has-text-right pt-2 is-size-7">
-                              {project.date}
-                            </p>
+                <AnimateWhenVisible>
+                  <div className="project-column" key={project.id}>
+                    <div className="card" key={project.id}>
+                      <header className="card-header">
+                        <p className="card-header-title is-centered is-size-4">
+                          {project.title}
+                        </p>
+                      </header>
+                      <div className="card-image">
+                        <figure className="image">
+                          {(project.preview.url && (
+                            <Image
+                              image={project.preview}
+                              style={{
+                                height: "350px",
+                                width: "auto",
+                                margin: "auto",
+                              }}
+                            />
+                          )) || (
+                            <img
+                              src="https://bulma.io/images/placeholders/1280x960.png"
+                              alt="Placeholder image"
+                            />
                           )}
+                        </figure>
+                      </div>
+                      <div className="card-content">
+                        <div className="tags">
+                          {project &&
+                            project.categories.map((cat, index) => (
+                              <span
+                                className="tag is-link is-medium"
+                                key={index}
+                              >
+                                {cat}
+                              </span>
+                            ))}
+                        </div>
+                        <div className="project-preview is-flex is-flex-direction-column is-justify-content-space-between">
+                          <div className="content has-text-weight-semibold has-text-justified">
+                            {project.subtitle}
+                          </div>
+                          <div className="has-text-centered">
+                            <Link
+                              href={`/project/${project.slug}`}
+                              key={project.id}
+                            >
+                              <button
+                                className="button is-dark is-outlined is-rounded"
+                                style={{ width: "100%" }}
+                              >
+                                View Project
+                              </button>
+                            </Link>
+                            {project.date && (
+                              <p className="has-text-right pt-2 is-size-7">
+                                {project.date}
+                              </p>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </AnimateWhenVisible>
               ))}
           </div>
         </section>
