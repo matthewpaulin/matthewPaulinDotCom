@@ -14,7 +14,9 @@ export const AnimateWhenVisible = ({ children }) => {
       ref={ref}
       animate={controls}
       initial="hidden"
-      transition={{ duration: 0.3 }}
+      transition={{
+        duration: 0.3,
+      }}
       variants={{
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0 },

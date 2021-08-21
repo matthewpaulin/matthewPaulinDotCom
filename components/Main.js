@@ -9,7 +9,6 @@ export const Main = ({ children, variants }) => {
       animate="enter" // Animated state to variants.enter
       exit="exit" // Exit state (used later) to variants.exit
       transition={{ type: "linear" }} // Set the transition to linear
-      className=""
     >
       {children}
     </motion.main>
