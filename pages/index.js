@@ -121,9 +121,9 @@ export default function Home({ projects }) {
           <div className="project-columns">
             {projects &&
               projects.map((project) => (
-                <AnimateWhenVisible>
-                  <div className="project-column" key={project.id}>
-                    <div className="card" key={project.id}>
+                <AnimateWhenVisible key={project.id}>
+                  <div className="project-column">
+                    <div className="card">
                       <header className="card-header">
                         <p className="card-header-title is-centered is-size-4">
                           {project.title}
