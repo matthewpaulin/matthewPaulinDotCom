@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "bulma": "^0.9.2",
+    "eslint": "^7.32.0",
     "framer-motion": "^4.1.17",
     "next": "^11.1.0",
     "react": "17.0.2",
