@@ -12,6 +12,7 @@ import projects from "../projectList";
 import { AnimateWhenVisible } from "../components/AnimateWhenVisible";
 import { Main } from "../components/Main";
 export default function Home({ projects }) {
+  const projectsToDisplay = 3;
   return (
     <Main>
       <div>
@@ -123,11 +124,16 @@ export default function Home({ projects }) {
           </div>
         </section>
         <section id="projects" className="py-5">
+          <div className="narrow-container is-size-4 mb-6 is-family-monospace section-title">
+            <hr />
+            <span>Featured Projects</span>
+            <hr />
+          </div>
           <ul id="featured-projects-mobile" className="container">
             {projects &&
               projects.map(
                 (project, idx) =>
-                  idx < 3 && (
+                  idx < projectsToDisplay && (
                     <AnimateWhenVisible key={project.id + "mobile"}>
                       <li className="card has-text-light mb-4">
                         <header className="card-header">
@@ -208,7 +214,6 @@ export default function Home({ projects }) {
                   )
               )}
           </ul>
-
           <ul id="featured-projects" className="narrow-container">
             {projects &&
               projects.map(
@@ -299,6 +304,22 @@ export default function Home({ projects }) {
                   )
               )}
           </ul>
+          {projects.length > projectsToDisplay && (
+            <>
+              <div className="narrow-container is-size-4 my-6 is-family-monospace section-title">
+                <hr />
+                <span>Other Projects</span>
+                <hr />
+              </div>
+              <div className="other-projects">
+                {projects.map((project, idx) => {
+                  idx >= projectsToDisplay && (
+                    <div className="grid-project">aaa</div>
+                  );
+                })}
+              </div>
+            </>
+          )}
         </section>
       </div>
     </Main>

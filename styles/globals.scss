@@ -143,18 +143,22 @@ hr {
   background: linear-gradient(
     0deg,
     rgba(10, 10, 10, 1) 0%,
-    rgba(25, 22, 84, 1) 30%,
+    rgba(25, 22, 84, 1) 25%,
+    rgba(40, 50, 100, 1) 50%,
+    rgba(55, 100, 120, 1) 75%,
     rgba(67, 198, 172, 1) 100%
   );
   flex: 1;
 }
 
 section#projects {
-  background: rgb(10, 10, 10);
+  background: rgba(67, 198, 172, 1);
   background: linear-gradient(
     0deg,
     rgba(10, 10, 10, 1) 0%,
-    rgba(25, 22, 84, 1) 30%,
+    rgba(25, 22, 84, 1) 25%,
+    rgba(40, 50, 100, 1) 50%,
+    rgba(55, 100, 120, 1) 75%,
     rgba(67, 198, 172, 1) 100%
   );
 }
@@ -245,7 +249,7 @@ section#projects {
       text-align: left;
       grid-template-columns: 3fr 2fr;
       .project-image {
-        text-align: center;
+        text-align: right;
         grid-column: 2;
       }
       .project-info {
@@ -257,7 +261,7 @@ section#projects {
       text-align: right;
       grid-template-columns: 2fr 3fr;
       .project-image {
-        text-align: center;
+        text-align: left;
         grid-column: 1;
       }
       .project-info {
@@ -339,6 +343,9 @@ button.is-outlined {
 }
 
 #navbar {
+  img {
+    cursor: pointer;
+  }
   z-index: 1000;
   background: #2e3131;
   position: fixed;
@@ -467,4 +474,20 @@ button.is-outlined {
 }
 .has-background-purple {
   background: rgb(131, 58, 180);
+}
+
+.section-title {
+  hr {
+    flex: 1;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  span {
+    padding: 0 1.5rem;
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0;
 }
