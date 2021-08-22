@@ -29,7 +29,9 @@ export default function About({ about, languages, web, databases, other }) {
               </p>
             </div>
             <div className="is-flex is-align-items-center">
-              <h1 className="is-size-2 has-text-weight-semibold">Skills</h1>
+              <h1 className="pl-4 is-size-2 has-text-weight-semibold">
+                Skills
+              </h1>
               <a
                 className="ml-4 icon has-text-grey-light"
                 onClick={toggleSkillsExpanded}
@@ -45,11 +47,11 @@ export default function About({ about, languages, web, databases, other }) {
                 <hr />
                 <div className="columns is-multiline is-centered mt-4">
                   {languages && (
-                    <div className="column is-full-mobile is-half-tablet">
-                      <h1 className="is-size-3 has-text-weight-medium pb-3">
+                    <div className="column is-full-tablet is-half-desktop">
+                      <h1 className="is-size-3 has-text-weight-medium pb-3 has-text-centered">
                         Programming Languages
                       </h1>
-                      <div className="is-flex is-flex-wrap-wrap">
+                      <div className="is-flex is-flex-wrap-wrap is-justify-content-center">
                         {languages.map((tech) => (
                           <div className="tech is-flex m-3" key={tech.name}>
                             <figure className={"image tech-img"}>
@@ -79,11 +81,11 @@ export default function About({ about, languages, web, databases, other }) {
                     </div>
                   )}
                   {web && (
-                    <div className="column is-full-mobile is-half-tablet">
-                      <h1 className="is-size-3 has-text-weight-medium has-text-light pb-3">
+                    <div className="column is-full-tablet is-half-desktop">
+                      <h1 className="is-size-3 has-text-weight-medium has-text-light pb-3 has-text-centered">
                         Web Technologies
                       </h1>
-                      <div className="is-flex is-flex-wrap-wrap">
+                      <div className="is-flex is-flex-wrap-wrap is-justify-content-center">
                         {web.map((tech) => (
                           <div className="tech is-flex m-3" key={tech.name}>
                             <figure className={"image tech-img"}>
@@ -114,11 +116,11 @@ export default function About({ about, languages, web, databases, other }) {
                   )}
 
                   {databases && (
-                    <div className="column is-full-mobile is-half-tablet">
-                      <h1 className="is-size-3 has-text-weight-medium has-text-light pb-3">
+                    <div className="column is-full-tablet is-half-desktop">
+                      <h1 className="is-size-3 has-text-weight-medium has-text-light pb-3 has-text-centered">
                         Databases
                       </h1>
-                      <div className="is-flex is-flex-wrap-wrap">
+                      <div className="is-flex is-flex-wrap-wrap is-justify-content-center">
                         {databases.map((tech) => (
                           <div className="tech is-flex m-3" key={tech.name}>
                             <figure className={"image tech-img"}>
@@ -148,11 +150,11 @@ export default function About({ about, languages, web, databases, other }) {
                     </div>
                   )}
                   {other && (
-                    <div className="column is-full-mobile is-half-tablet">
-                      <h1 className="is-size-3 has-text-weight-medium has-text-light pb-3">
+                    <div className="column is-full-tablet is-half-desktop">
+                      <h1 className="is-size-3 has-text-weight-medium has-text-light pb-3 has-text-centered">
                         Other Tools
                       </h1>
-                      <div className="is-flex is-flex-wrap-wrap">
+                      <div className="is-flex is-flex-wrap-wrap is-justify-content-center">
                         {other.map((tech) => (
                           <div className="tech is-flex m-3" key={tech.name}>
                             <figure className={"image tech-img"}>
@@ -187,7 +189,7 @@ export default function About({ about, languages, web, databases, other }) {
 
             {/* Experience*/}
             <div className="is-flex is-align-items-center">
-              <h1 className="is-size-2 has-text-weight-semibold has-text-light">
+              <h1 className="pl-4 is-size-2 has-text-weight-semibold has-text-light">
                 Experience
               </h1>
               <a
@@ -216,7 +218,7 @@ export default function About({ about, languages, web, databases, other }) {
 
             {/* education */}
             <div className="is-flex is-align-items-center">
-              <h1 className="is-size-2 has-text-weight-semibold has-text-light">
+              <h1 className="pl-4 is-size-2 has-text-weight-semibold has-text-light">
                 Education
               </h1>
               <a
@@ -248,7 +250,7 @@ export default function About({ about, languages, web, databases, other }) {
 
             {/* achievements */}
             <div className="is-flex is-align-items-center">
-              <h1 className="is-size-2 has-text-weight-semibold has-text-light">
+              <h1 className="pl-4 is-size-2 has-text-weight-semibold has-text-light">
                 Achievements
               </h1>
               <a

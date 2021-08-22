@@ -108,9 +108,9 @@ hr {
   background-color: $light;
   opacity: 0.5;
 }
-#about-pg {
-  ul {
-    list-style: disc;
+#about-page {
+  div#about {
+    margin: 0 1rem;
   }
 }
 .tech-img {
