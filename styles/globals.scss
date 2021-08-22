@@ -333,9 +333,59 @@ section#projects {
   }
 }
 
-#other-projects {
-  background: rgba(255, 255, 255, 0.16);
+.other-projects {
+  text-align: center;
   display: grid;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media only screen and (max-width: $desktop) {
+    grid-template-columns: repeat(2, 350px);
+  }
+  @media only screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+  .grid-project {
+    cursor: pointer;
+    max-width: 350px;
+    position: relative;
+    height: 400px;
+    margin: auto;
+    width: 100%;
+    .project-image {
+      * {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    .project-info {
+      height: 100%;
+      width: 100%;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      .project-tech-tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-evenly;
+      }
+    }
+    button {
+      border-width: 1px;
+    }
+  }
 }
 
 button.is-outlined {
@@ -372,7 +422,7 @@ button.is-outlined {
     z-index: 2000;
     background-color: $primary;
     height: 50vh;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -395,6 +445,7 @@ button.is-outlined {
     position: relative;
     .burger {
       z-index: 9999;
+      display: none;
       visibility: hidden;
     }
     .navbar-links {
@@ -408,7 +459,7 @@ button.is-outlined {
       flex-direction: row;
       justify-content: space-around;
       color: white;
-      visibility: visible;
+      display: flex;
       span {
         cursor: pointer;
       }
@@ -455,10 +506,11 @@ button.is-outlined {
     @media only screen and (max-width: $navbar-breakpoint) {
       justify-content: space-between;
       .burger {
+        display: block;
         visibility: visible;
       }
       .navbar-links {
-        visibility: hidden;
+        display: none;
       }
     }
   }
