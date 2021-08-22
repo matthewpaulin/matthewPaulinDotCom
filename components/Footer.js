@@ -8,7 +8,10 @@ export const Footer = () => {
       <div className="content has-text-centered has-text-light">
         <p>
           &#169; 2021{"  |  "}
-          <a href="#" className="has-text-link">
+          <a
+            href="https://github.com/matthewpaulin/matthewPaulinDotCom"
+            className="has-text-link"
+          >
             Site Source Code
           </a>
         </p>

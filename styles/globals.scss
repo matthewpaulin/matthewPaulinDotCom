@@ -107,7 +107,7 @@ $pathLengths: 755, 507, 315, 315, 478, 516, 639, 450, 507, 423, 240, 240, 423;
   border: $link solid 0.3em;
 }
 hr {
-  background-color: black;
+  background-color: $light;
   opacity: 0.5;
 }
 .about-hr {
@@ -139,6 +139,7 @@ hr {
 }
 
 #wrapper {
+  color: $light;
   background: rgb(10, 10, 10);
   background: linear-gradient(
     0deg,
@@ -201,11 +202,12 @@ section#projects {
     display: grid;
     grid-auto-flow: row dense;
     gap: 1rem;
-    hr {
-      background-color: $light;
-    }
     .project-title {
       border-bottom: solid 1px $light;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
     }
     .project-info {
       color: $light;
@@ -241,6 +243,7 @@ section#projects {
       text-align: left;
       grid-template-columns: 3fr 2fr;
       .project-image {
+        text-align: center;
         grid-column: 2;
       }
       .project-info {
@@ -252,6 +255,7 @@ section#projects {
       text-align: right;
       grid-template-columns: 2fr 3fr;
       .project-image {
+        text-align: center;
         grid-column: 1;
       }
       .project-info {
@@ -285,9 +289,6 @@ section#projects {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      button {
-        flex: 1;
-      }
     }
   }
 
@@ -299,14 +300,14 @@ section#projects {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5em;
+  gap: 1rem;
   .project-tech-tags {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.5em;
+    gap: 1rem;
   }
 }
 .project-links {
@@ -315,6 +316,9 @@ section#projects {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  button {
+    flex: 1;
+  }
   .external-links {
     display: flex;
     flex-direction: row;
@@ -324,5 +328,10 @@ section#projects {
 }
 
 #other-projects {
-  background: rgba(0, 0, 0, 0.16);
+  background: rgba(255, 255, 255, 0.16);
+  display: grid;
+}
+
+button.is-outlined {
+  border-width: 0.2rem;
 }

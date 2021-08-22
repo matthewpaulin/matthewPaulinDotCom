@@ -4,9 +4,7 @@ export default function Contact() {
   return (
     <Main>
       <div className="container my-3 has-text-centered">
-        <h1 className="is-size-1 has-text-weight-bold has-text-black">
-          Contact Me
-        </h1>
+        <h1 className="is-size-1 has-text-weight-bold">Contact Me</h1>
         <p className="has-text-weight-medium is-size-4">
           Want to contact me? Email me at{" "}
           <a href="mailto:matthewjpaulin@gmail.com">matthewjpaulin@gmail.com</a>{" "}

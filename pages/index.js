@@ -124,196 +124,103 @@ export default function Home({ projects }) {
         </section>
         <section id="projects" className="py-5">
           <ul id="featured-projects-mobile" className="container">
-            <div className="card has-text-light">
-              <header className="card-header">
-                <p className="card-header-title is-centered is-size-4 has-text-light">
-                  Title
-                </p>
-              </header>
-              <div className="card-image">
-                <figure className="image">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </div>
-              <div className="card-content">
-                <div className="project-tech">
-                  <span className="icon has-text-light">
-                    <FontAwesomeIcon icon={faTools} />
-                  </span>
-                  <span className="tech-tag">Python</span>
-                  <span className="tech-tag">JavaScript</span>
-                  <span className="tech-tag">React</span>
-                  <span className="tech-tag">MongoDB</span>
-                  <span className="tech-tag">Node.js</span>
-                </div>
-                <div className="project-preview is-flex is-flex-direction-column is-justify-content-space-between">
-                  <div className="content has-text-justified">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </div>
-                  <div className="project-links">
-                    {/* <Link href={`/project/${project.slug}`} key={project.id}>
-                    <button
-                      className="button is-dark is-outlined is-rounded"
-                      style={{ width: "100%" }}
-                    >
-                      View Project
-                    </button>
-                  </Link> */}
-                    <button className="button is-light is-rounded is-outlined">
-                      View Project
-                    </button>
-                    <div className="external-links">
-                      <span className="icon has-text-light">
-                        <FontAwesomeIcon icon={faFileCode} />
-                      </span>
-                      <span className="icon has-text-light">
-                        <FontAwesomeIcon icon={faExternalLinkAlt} />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ul>
-          <ul id="featured-projects" className="container">
-            <li className="featured-project right-content">
-              {/* reorder these divs when mapping content */}
-              <div className="project-image">
-                <img
-                  src="https://bulma.io/images/placeholders/1280x960.png"
-                  alt="Placeholder image"
-                />
-              </div>
-              <div className="project-info is-family-monospace has-text-light">
-                <h1 className="project-title is-size-3 has-text-weight-medium">
-                  Project Title
-                </h1>
-                <div className="project-description right">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </div>
-                <div className="project-tech">
-                  <span className="icon has-text-light">
-                    <FontAwesomeIcon icon={faTools} />
-                  </span>
-                  <span className="tech-tag">Python</span>
-                  <span className="tech-tag">JavaScript</span>
-                  <span className="tech-tag">React</span>
-                  <span className="tech-tag">MongoDB</span>
-                  <span className="tech-tag">Node.js</span>
-                </div>
-                <div className="project-links">
-                  {/* <Link href={`/project/${project.slug}`} key={project.id}>
-                    <button
-                      className="button is-dark is-outlined is-rounded"
-                      style={{ width: "100%" }}
-                    >
-                      View Project
-                    </button>
-                  </Link> */}
-                  <button className="button is-light is-rounded is-outlined">
-                    View Project
-                  </button>
-                  <div className="external-links">
-                    <span className="icon has-text-light">
-                      <FontAwesomeIcon icon={faFileCode} />
-                    </span>
-                    <span className="icon has-text-light">
-                      <FontAwesomeIcon icon={faExternalLinkAlt} />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            {/* <hr /> */}
-
-            <li className="featured-project left-content">
-              {/* reorder these divs when mapping content */}
-              <div className="project-image">
-                <img
-                  src="https://bulma.io/images/placeholders/1280x960.png"
-                  alt="Placeholder image"
-                />
-              </div>
-              <div className="project-info is-family-monospace">
-                <p className="project-title is-size-3 has-text-weight-medium">
-                  Project Title
-                </p>
-                <div className="project-description left">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </div>
-                <div className="project-tech">
-                  <span className="icon has-text-light">
-                    <FontAwesomeIcon icon={faTools} />
-                  </span>
-                  <span className="tech-tag">Python</span>
-                  <span className="tech-tag">JavaScript</span>
-                  <span className="tech-tag">React</span>
-                  <span className="tech-tag">MongoDB</span>
-                  <span className="tech-tag">Node.js</span>
-                </div>
-                <div className="project-links">
-                  {/* <Link href={`/project/${project.slug}`} key={project.id}>
-                    <button
-                      className="button is-dark is-outlined is-rounded"
-                      style={{ width: "100%" }}
-                    >
-                      View Project
-                    </button>
-                  </Link> */}
-                  <button className="button is-light is-rounded is-outlined">
-                    View Project
-                  </button>
-                  <div className="external-links">
-                    <span className="icon has-text-light">
-                      <FontAwesomeIcon icon={faFileCode} />
-                    </span>
-                    <span className="icon has-text-light">
-                      <FontAwesomeIcon icon={faExternalLinkAlt} />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          {/* <div className="project-columns">
             {projects &&
-              projects.map((project) => (
-                <AnimateWhenVisible key={project.id}>
-                  
-                  <div className="project-column">
-                    <div className="card">
-                      <header className="card-header">
-                        <p className="card-header-title is-centered is-size-4">
-                          {project.title}
-                        </p>
-                      </header>
-                      <div className="card-image">
-                        <figure className="image">
+              projects.map(
+                (project, idx) =>
+                  idx < 3 && (
+                    <AnimateWhenVisible key={project.id + "mobile"}>
+                      <li className="card has-text-light mb-4">
+                        <header className="card-header">
+                          <p className="card-header-title is-centered is-size-4 has-text-light">
+                            {project.title}
+                          </p>
+                        </header>
+                        <div className="card-image">
+                          <figure className="image">
+                            {(project.preview.url && (
+                              <Image
+                                image={project.preview}
+                                style={{
+                                  maxHeight: "350px",
+                                  width: "auto",
+                                  margin: "auto",
+                                }}
+                              />
+                            )) || (
+                              <img
+                                src="https://bulma.io/images/placeholders/1280x960.png"
+                                alt="Placeholder image"
+                              />
+                            )}
+                          </figure>
+                        </div>
+                        <div className="card-content">
+                          <div className="project-tech">
+                            <span className="icon has-text-light">
+                              <FontAwesomeIcon icon={faTools} />
+                            </span>
+                            <div className="project-tech-tags">
+                              {project.categories.map((cat, index) => (
+                                <span className="tech-tag" key={index}>
+                                  {cat}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="project-preview is-flex is-flex-direction-column is-justify-content-space-between">
+                            <div className="content has-text-justified">
+                              {project.subtitle}
+                            </div>
+                            <div className="project-links">
+                              <Link
+                                href={`/project/${project.slug}`}
+                                key={project.id}
+                              >
+                                <button className="button is-light is-rounded is-outlined">
+                                  View Project
+                                </button>
+                              </Link>
+
+                              <div className="external-links">
+                                <a
+                                  href={project.github}
+                                  className="icon has-text-light"
+                                >
+                                  <FontAwesomeIcon icon={faFileCode} />
+                                </a>
+                                <a
+                                  href={project.url}
+                                  className="icon has-text-light"
+                                >
+                                  <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                </a>
+                              </div>
+                            </div>
+                            {project.date && (
+                              <p className="has-text-right pt-2 is-size-7">
+                                {project.date}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </li>
+                    </AnimateWhenVisible>
+                  )
+              )}
+          </ul>
+
+          <ul id="featured-projects" className="container">
+            {projects &&
+              projects.map(
+                (project, idx) =>
+                  idx < 3 && (
+                    <AnimateWhenVisible key={project.id}>
+                      <li
+                        className={`featured-project ${
+                          idx % 2 == 0 ? "right-content" : "left-content"
+                        }`}
+                      >
+                        <div className="project-image">
                           {(project.preview.url && (
                             <Image
                               image={project.preview}
@@ -329,49 +236,69 @@ export default function Home({ projects }) {
                               alt="Placeholder image"
                             />
                           )}
-                        </figure>
-                      </div>
-                      <div className="card-content">
-                        <div className="tags">
-                          {project &&
-                            project.categories.map((cat, index) => (
-                              <span
-                                className="tag is-link is-medium"
-                                key={index}
-                              >
-                                {cat}
-                              </span>
-                            ))}
                         </div>
-                        <div className="project-preview is-flex is-flex-direction-column is-justify-content-space-between">
-                          <div className="content has-text-weight-semibold has-text-justified">
+                        <div className="project-info is-family-monospace has-text-light">
+                          <div className="project-title is-size-3 has-text-weight-medium">
+                            {idx % 2 == 0 && project.date && (
+                              <span className="has-text-left is-size-7 has-text-light">
+                                {project.date}
+                              </span>
+                            )}
+                            {project.title}
+                            {idx % 2 != 0 && project.date && (
+                              <span className="has-text-right is-size-7 has-text-light">
+                                {project.date}
+                              </span>
+                            )}
+                          </div>
+                          <div
+                            className={`project-description ${
+                              idx % 2 == 0 ? "right" : "left"
+                            }`}
+                          >
                             {project.subtitle}
                           </div>
-                          <div className="has-text-centered">
+                          <div className="project-tech">
+                            <span className="icon has-text-light">
+                              <FontAwesomeIcon icon={faTools} />
+                            </span>
+                            <div className="project-tech-tags">
+                              {project.categories.map((cat, index) => (
+                                <span className="tech-tag" key={index}>
+                                  {cat}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="project-links">
                             <Link
                               href={`/project/${project.slug}`}
                               key={project.id}
                             >
-                              <button
-                                className="button is-dark is-outlined is-rounded"
-                                style={{ width: "100%" }}
-                              >
+                              <button className="button is-light is-rounded is-outlined">
                                 View Project
                               </button>
                             </Link>
-                            {project.date && (
-                              <p className="has-text-right pt-2 is-size-7">
-                                {project.date}
-                              </p>
-                            )}
+
+                            <div className="external-links">
+                              <Link href={project.github}>
+                                <a className="icon has-text-light">
+                                  <FontAwesomeIcon icon={faFileCode} />
+                                </a>
+                              </Link>
+                              <Link href={project.url}>
+                                <a className="icon has-text-light">
+                                  <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                </a>
+                              </Link>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </AnimateWhenVisible>
-              ))}
-          </div>*/}
+                      </li>
+                    </AnimateWhenVisible>
+                  )
+              )}
+          </ul>
         </section>
       </div>
     </Main>
