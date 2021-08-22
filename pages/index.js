@@ -209,7 +209,7 @@ export default function Home({ projects }) {
               )}
           </ul>
 
-          <ul id="featured-projects" className="container">
+          <ul id="featured-projects" className="narrow-container">
             {projects &&
               projects.map(
                 (project, idx) =>

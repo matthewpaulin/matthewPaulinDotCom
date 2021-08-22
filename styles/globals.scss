@@ -457,3 +457,8 @@ button.is-outlined {
     width: auto;
   }
 }
+.narrow-container {
+  max-width: $desktop + 1;
+  margin: auto;
+  padding: 0 1rem;
+}
