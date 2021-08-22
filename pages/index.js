@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelopeSquare,
+  faFileCode,
+  faExternalLinkAlt,
+  faTools,
+} from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Image from "../components/Image";
 import projects from "../projectList";
@@ -9,7 +14,7 @@ import { Main } from "../components/Main";
 export default function Home({ projects }) {
   return (
     <Main>
-      <div id="home-page">
+      <div>
         <section
           id="main-hero"
           className="is-flex is-flex-direction-column is-justify-content-center px-6 pt-6"
@@ -117,11 +122,189 @@ export default function Home({ projects }) {
             </ul>
           </div>
         </section>
-        <section id="projects" className="container my-5">
-          <div className="project-columns">
+        <section id="projects" className="py-5">
+          <ul id="featured-projects-mobile" className="container">
+            <div className="card has-text-light">
+              <header className="card-header">
+                <p className="card-header-title is-centered is-size-4 has-text-light">
+                  Title
+                </p>
+              </header>
+              <div className="card-image">
+                <figure className="image">
+                  <img
+                    src="https://bulma.io/images/placeholders/1280x960.png"
+                    alt="Placeholder image"
+                  />
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="project-tech">
+                  <span className="icon has-text-light">
+                    <FontAwesomeIcon icon={faTools} />
+                  </span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">JavaScript</span>
+                  <span className="tech-tag">React</span>
+                  <span className="tech-tag">MongoDB</span>
+                  <span className="tech-tag">Node.js</span>
+                </div>
+                <div className="project-preview is-flex is-flex-direction-column is-justify-content-space-between">
+                  <div className="content has-text-justified">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </div>
+                  <div className="project-links">
+                    {/* <Link href={`/project/${project.slug}`} key={project.id}>
+                    <button
+                      className="button is-dark is-outlined is-rounded"
+                      style={{ width: "100%" }}
+                    >
+                      View Project
+                    </button>
+                  </Link> */}
+                    <button className="button is-light is-rounded is-outlined">
+                      View Project
+                    </button>
+                    <div className="external-links">
+                      <span className="icon has-text-light">
+                        <FontAwesomeIcon icon={faFileCode} />
+                      </span>
+                      <span className="icon has-text-light">
+                        <FontAwesomeIcon icon={faExternalLinkAlt} />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+          <ul id="featured-projects" className="container">
+            <li className="featured-project right-content">
+              {/* reorder these divs when mapping content */}
+              <div className="project-image">
+                <img
+                  src="https://bulma.io/images/placeholders/1280x960.png"
+                  alt="Placeholder image"
+                />
+              </div>
+              <div className="project-info is-family-monospace has-text-light">
+                <h1 className="project-title is-size-3 has-text-weight-medium">
+                  Project Title
+                </h1>
+                <div className="project-description right">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </div>
+                <div className="project-tech">
+                  <span className="icon has-text-light">
+                    <FontAwesomeIcon icon={faTools} />
+                  </span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">JavaScript</span>
+                  <span className="tech-tag">React</span>
+                  <span className="tech-tag">MongoDB</span>
+                  <span className="tech-tag">Node.js</span>
+                </div>
+                <div className="project-links">
+                  {/* <Link href={`/project/${project.slug}`} key={project.id}>
+                    <button
+                      className="button is-dark is-outlined is-rounded"
+                      style={{ width: "100%" }}
+                    >
+                      View Project
+                    </button>
+                  </Link> */}
+                  <button className="button is-light is-rounded is-outlined">
+                    View Project
+                  </button>
+                  <div className="external-links">
+                    <span className="icon has-text-light">
+                      <FontAwesomeIcon icon={faFileCode} />
+                    </span>
+                    <span className="icon has-text-light">
+                      <FontAwesomeIcon icon={faExternalLinkAlt} />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            {/* <hr /> */}
+
+            <li className="featured-project left-content">
+              {/* reorder these divs when mapping content */}
+              <div className="project-image">
+                <img
+                  src="https://bulma.io/images/placeholders/1280x960.png"
+                  alt="Placeholder image"
+                />
+              </div>
+              <div className="project-info is-family-monospace">
+                <p className="project-title is-size-3 has-text-weight-medium">
+                  Project Title
+                </p>
+                <div className="project-description left">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </div>
+                <div className="project-tech">
+                  <span className="icon has-text-light">
+                    <FontAwesomeIcon icon={faTools} />
+                  </span>
+                  <span className="tech-tag">Python</span>
+                  <span className="tech-tag">JavaScript</span>
+                  <span className="tech-tag">React</span>
+                  <span className="tech-tag">MongoDB</span>
+                  <span className="tech-tag">Node.js</span>
+                </div>
+                <div className="project-links">
+                  {/* <Link href={`/project/${project.slug}`} key={project.id}>
+                    <button
+                      className="button is-dark is-outlined is-rounded"
+                      style={{ width: "100%" }}
+                    >
+                      View Project
+                    </button>
+                  </Link> */}
+                  <button className="button is-light is-rounded is-outlined">
+                    View Project
+                  </button>
+                  <div className="external-links">
+                    <span className="icon has-text-light">
+                      <FontAwesomeIcon icon={faFileCode} />
+                    </span>
+                    <span className="icon has-text-light">
+                      <FontAwesomeIcon icon={faExternalLinkAlt} />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          {/* <div className="project-columns">
             {projects &&
               projects.map((project) => (
                 <AnimateWhenVisible key={project.id}>
+                  
                   <div className="project-column">
                     <div className="card">
                       <header className="card-header">
@@ -188,7 +371,7 @@ export default function Home({ projects }) {
                   </div>
                 </AnimateWhenVisible>
               ))}
-          </div>
+          </div>*/}
         </section>
       </div>
     </Main>
