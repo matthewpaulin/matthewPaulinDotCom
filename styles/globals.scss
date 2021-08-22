@@ -110,7 +110,10 @@ hr {
 }
 #about-page {
   div#about {
-    margin: 0 1rem;
+    background: rgba(0, 0, 0, 0.16);
+    padding: 0 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 .tech-img {
