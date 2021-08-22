@@ -65,7 +65,7 @@ export default function About({ about, languages, web, databases, other }) {
                             </figure>
 
                             <p
-                              className="has-background-link has-text-light is-size-5 has-text-weight-semibold px-3"
+                              className="has-background-primary has-text-light is-size-5 has-text-weight-semibold px-3"
                               style={{
                                 lineHeight: "64px",
                                 borderTopRightRadius: "12px",
@@ -168,7 +168,7 @@ export default function About({ about, languages, web, databases, other }) {
                             </figure>
 
                             <p
-                              className="has-background-primary has-text-light is-size-5 has-text-weight-semibold px-3"
+                              className="has-background-purple has-text-light is-size-5 has-text-weight-semibold px-3"
                               style={{
                                 lineHeight: "64px",
                                 borderTopRightRadius: "12px",
