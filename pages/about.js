@@ -19,22 +19,21 @@ export default function About({ about, languages, web, databases, other }) {
     setEducationExpanded(!educationExpanded);
   return (
     <Main>
-      <div className="container mt-3 mb-5 has-text-black" id="about-page">
+      <div className="container mt-3 mb-5" id="about-page">
         {about && (
           <>
             <div id="about" className="has-text-justified">
-              <h1 className="is-size-1 has-text-weight-bold has-text-black">
-                About Me
-              </h1>
+              <h1 className="is-size-1 has-text-weight-bold">About Me</h1>
               <p className="is-size-5 py-3 has-text-justified has-text-weight-medium">
                 {about.intro}
               </p>
             </div>
             <div className="is-flex is-align-items-center">
-              <h1 className="is-size-2 has-text-weight-semibold has-text-black ">
-                Skills
-              </h1>
-              <a className="ml-4 icon" onClick={toggleSkillsExpanded}>
+              <h1 className="is-size-2 has-text-weight-semibold">Skills</h1>
+              <a
+                className="ml-4 icon has-text-grey-light"
+                onClick={toggleSkillsExpanded}
+              >
                 <FontAwesomeIcon
                   icon={faAngleDown}
                   className={`rotating-icon ${skillsExpanded && "open"}`}
@@ -43,11 +42,11 @@ export default function About({ about, languages, web, databases, other }) {
             </div>
             {skillsExpanded && (
               <>
-                <hr className="about-hr" />
+                <hr />
                 <div className="columns is-multiline is-centered mt-4">
                   {languages && (
                     <div className="column is-full-mobile is-half-tablet">
-                      <h1 className="is-size-3 has-text-weight-medium has-text-black pb-3">
+                      <h1 className="is-size-3 has-text-weight-medium pb-3">
                         Programming Languages
                       </h1>
                       <div className="is-flex is-flex-wrap-wrap">
@@ -64,7 +63,7 @@ export default function About({ about, languages, web, databases, other }) {
                             </figure>
 
                             <p
-                              className="has-background-link has-text-white is-size-5 has-text-weight-semibold px-3"
+                              className="has-background-link has-text-light is-size-5 has-text-weight-semibold px-3"
                               style={{
                                 lineHeight: "64px",
                                 borderTopRightRadius: "12px",
@@ -81,7 +80,7 @@ export default function About({ about, languages, web, databases, other }) {
                   )}
                   {web && (
                     <div className="column is-full-mobile is-half-tablet">
-                      <h1 className="is-size-3 has-text-weight-medium has-text-black pb-3">
+                      <h1 className="is-size-3 has-text-weight-medium has-text-light pb-3">
                         Web Technologies
                       </h1>
                       <div className="is-flex is-flex-wrap-wrap">
@@ -98,7 +97,7 @@ export default function About({ about, languages, web, databases, other }) {
                             </figure>
 
                             <p
-                              className="has-background-danger has-text-white is-size-5 has-text-weight-semibold px-3"
+                              className="has-background-danger has-text-light is-size-5 has-text-weight-semibold px-3"
                               style={{
                                 lineHeight: "64px",
                                 borderTopRightRadius: "12px",
@@ -116,7 +115,7 @@ export default function About({ about, languages, web, databases, other }) {
 
                   {databases && (
                     <div className="column is-full-mobile is-half-tablet">
-                      <h1 className="is-size-3 has-text-weight-medium has-text-black pb-3">
+                      <h1 className="is-size-3 has-text-weight-medium has-text-light pb-3">
                         Databases
                       </h1>
                       <div className="is-flex is-flex-wrap-wrap">
@@ -133,7 +132,7 @@ export default function About({ about, languages, web, databases, other }) {
                             </figure>
 
                             <p
-                              className="has-background-success has-text-white is-size-5 has-text-weight-semibold px-3"
+                              className="has-background-success has-text-light is-size-5 has-text-weight-semibold px-3"
                               style={{
                                 lineHeight: "64px",
                                 borderTopRightRadius: "12px",
@@ -150,7 +149,7 @@ export default function About({ about, languages, web, databases, other }) {
                   )}
                   {other && (
                     <div className="column is-full-mobile is-half-tablet">
-                      <h1 className="is-size-3 has-text-weight-medium has-text-black pb-3">
+                      <h1 className="is-size-3 has-text-weight-medium has-text-light pb-3">
                         Other Tools
                       </h1>
                       <div className="is-flex is-flex-wrap-wrap">
@@ -167,7 +166,7 @@ export default function About({ about, languages, web, databases, other }) {
                             </figure>
 
                             <p
-                              className="has-background-primary has-text-white is-size-5 has-text-weight-semibold px-3"
+                              className="has-background-primary has-text-light is-size-5 has-text-weight-semibold px-3"
                               style={{
                                 lineHeight: "64px",
                                 borderTopRightRadius: "12px",
@@ -188,10 +187,13 @@ export default function About({ about, languages, web, databases, other }) {
 
             {/* Experience*/}
             <div className="is-flex is-align-items-center">
-              <h1 className="is-size-2 has-text-weight-semibold has-text-black">
+              <h1 className="is-size-2 has-text-weight-semibold has-text-light">
                 Experience
               </h1>
-              <a className="ml-4 icon" onClick={toggleExperienceExpanded}>
+              <a
+                className="ml-4 icon has-text-grey-light"
+                onClick={toggleExperienceExpanded}
+              >
                 <FontAwesomeIcon
                   icon={faAngleDown}
                   className={`rotating-icon ${experienceExpanded && "open"}`}
@@ -200,7 +202,7 @@ export default function About({ about, languages, web, databases, other }) {
             </div>
             {experienceExpanded && (
               <>
-                <hr className="about-hr" />
+                <hr />
                 {about.experience.map((job, index) => (
                   <div className="mb-5" key={index}>
                     <p className="is-size-4 has-text-weight-semibold px-2">
@@ -214,10 +216,13 @@ export default function About({ about, languages, web, databases, other }) {
 
             {/* education */}
             <div className="is-flex is-align-items-center">
-              <h1 className="is-size-2 has-text-weight-semibold has-text-black">
+              <h1 className="is-size-2 has-text-weight-semibold has-text-light">
                 Education
               </h1>
-              <a className="ml-4 icon" onClick={toggleEducationExpanded}>
+              <a
+                className="ml-4 icon has-text-grey-light"
+                onClick={toggleEducationExpanded}
+              >
                 <FontAwesomeIcon
                   icon={faAngleDown}
                   className={`rotating-icon ${educationExpanded && "open"}`}
@@ -226,7 +231,7 @@ export default function About({ about, languages, web, databases, other }) {
             </div>
             {educationExpanded && (
               <>
-                <hr className="about-hr" />
+                <hr />
                 <div className="mb-5">
                   <p className="is-size-4 has-text-weight-medium">
                     {about.education.description}
@@ -243,10 +248,13 @@ export default function About({ about, languages, web, databases, other }) {
 
             {/* achievements */}
             <div className="is-flex is-align-items-center">
-              <h1 className="is-size-2 has-text-weight-semibold has-text-black">
+              <h1 className="is-size-2 has-text-weight-semibold has-text-light">
                 Achievements
               </h1>
-              <a className="ml-4 icon" onClick={toggleAchievementsExpanded}>
+              <a
+                className="ml-4 icon has-text-grey-light"
+                onClick={toggleAchievementsExpanded}
+              >
                 <FontAwesomeIcon
                   icon={faAngleDown}
                   className={`rotating-icon ${achievementsExpanded && "open"}`}
@@ -255,7 +263,7 @@ export default function About({ about, languages, web, databases, other }) {
             </div>
             {achievementsExpanded && (
               <>
-                <hr className="about-hr" />
+                <hr />
                 {about.achievements.map((award, index) => (
                   <div className="mb-5" key={index}>
                     <ul>

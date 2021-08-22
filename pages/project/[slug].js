@@ -62,7 +62,7 @@ export default function Project({ project }) {
             <div className="tags column has-text-left">
               {project &&
                 project.categories.map((cat) => (
-                  <span className="tag is-link is-medium" key={cat}>
+                  <span className="tag is-primary is-medium" key={cat}>
                     {cat}
                   </span>
                 ))}
@@ -80,7 +80,7 @@ export default function Project({ project }) {
               </a>
               {project.url && (
                 <a
-                  className="button is-link mx-4 is-medium"
+                  className="button is-primary mx-4 is-medium"
                   href={project.url || "#"}
                 >
                   <span className="icon">

@@ -19,6 +19,7 @@ body {
 $navbar-breakpoint: $tablet;
 $card-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 $card-content-padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+$primary: #3276d5;
 @import "~bulma/bulma.sass";
 
 $pathLengths: 755, 507, 315, 315, 478, 516, 639, 450, 507, 423, 240, 240, 423;
@@ -110,9 +111,6 @@ hr {
   background-color: $light;
   opacity: 0.5;
 }
-.about-hr {
-  background-color: $link;
-}
 #about-pg {
   ul {
     list-style: disc;
@@ -122,6 +120,7 @@ hr {
   border: solid 2px black;
   border-radius: 12px 0 0 12px;
   overflow: hidden;
+  background: white;
 }
 .tech {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -217,7 +216,10 @@ section#projects {
       .project-description {
         padding: 0.5em;
         background: #2c3e50;
+        height: min-content;
         &.left {
+          position: relative;
+          left: 0;
           width: 120%;
         }
         &.right {
