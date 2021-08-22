@@ -19,7 +19,7 @@ export default function About({ about, languages, web, databases, other }) {
     setEducationExpanded(!educationExpanded);
   return (
     <Main>
-      <div className="container mt-3 mb-5" id="about-page">
+      <div className="container m-3 mb-5" id="about-page">
         {about && (
           <>
             <div id="about" className="has-text-justified">
