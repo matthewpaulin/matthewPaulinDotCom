@@ -2,10 +2,10 @@ export default {
   title: "Galaxy Game",
   id: "galaxy",
   date: "2016",
-  url: "",
+  url: "galaxy.matthewpaulin.com",
   github: "https://github.com/matthewpaulin/Galaxy_Game",
   subtitle:
-    "This game is a simple space-themed, rock shooter, coded in Processing",
+    "This game is a simple space-themed, rock shooter, coded in Processing. **Sound Warning**",
   slug: "galaxy",
   images: [],
   preview: {

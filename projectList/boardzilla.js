@@ -2,7 +2,7 @@ export default {
   title: "Boardzilla",
   id: "boardzilla",
   date: "2021",
-  url: "",
+  url: "boardzilla.matthewpaulin.com",
   github: "https://github.com/3A04-T2G10/Boardzilla",
   description:
     "Boardzilla is an online application that serves as a dashboard for a variety of \

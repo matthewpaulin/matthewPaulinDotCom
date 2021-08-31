@@ -2,7 +2,7 @@ export default {
   title: "Easy Money",
   id: "easymoney",
   date: "2020",
-  url: "https://easy-money-1.web.app",
+  url: "em.matthewpaulin.com",
   github: "https://github.com/matthewpaulin/Easy-Money",
   description:
     "I created Easy Money mainly as a means to introduce myself to React as well as Google Firebase. \

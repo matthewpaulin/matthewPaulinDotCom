@@ -73,7 +73,7 @@ export default function Navbar() {
       </motion.ul>
       <div id="main-nav">
         <Link href="/">
-          <img src="/icon-big.png" />
+          <img src="/android-chrome-512x512.png" />
         </Link>
         <div className="navbar-links">
           <Link href="/">
