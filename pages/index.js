@@ -317,72 +317,72 @@ export default function Home({ projects }) {
                   (project, idx) =>
                     idx >= projectsToDisplay && (
                       <AnimateWhenVisible key={project.id}>
-                        <Link href={`/project/${project.slug}`}>
-                          <motion.div
-                            className="grid-project"
-                            whileHover={{ scale: 1.05 }}
-                          >
-                            <div className="project-image">
-                              {(project.preview.url && (
-                                <Image
-                                  image={project.preview}
-                                  style={{
-                                    maxHeight: "350px",
-                                    width: "auto",
-                                    margin: "auto",
-                                  }}
-                                />
-                              )) || (
-                                <img
-                                  src="https://bulma.io/images/placeholders/1280x960.png"
-                                  alt="Placeholder image"
-                                />
-                              )}
-                            </div>
-                            <div className="project-info is-family-monospace has-text-light">
+                        <motion.div
+                          className="grid-project"
+                          whileHover={{ scale: 1.05 }}
+                        >
+                          <div className="project-image">
+                            {(project.preview.url && (
+                              <Image
+                                image={project.preview}
+                                style={{
+                                  maxHeight: "350px",
+                                  width: "auto",
+                                  margin: "auto",
+                                }}
+                              />
+                            )) || (
+                              <img
+                                src="https://bulma.io/images/placeholders/1280x960.png"
+                                alt="Placeholder image"
+                              />
+                            )}
+                          </div>
+                          <div className="project-info is-family-monospace has-text-light">
+                            <Link href={`/project/${project.slug}`}>
                               <div className="project-description">
                                 <div className="is-size-4">{project.title}</div>
                                 {project.subtitle}
                               </div>
-                              <div>
-                                <div className="project-tech-tags has-text pb-2">
-                                  {project.categories &&
-                                    project.categories.map((cat, index) => (
-                                      <span className="tech-tag" key={index}>
-                                        {cat}
-                                      </span>
-                                    ))}
-                                </div>
-                                <div className="project-links">
-                                  {project.date && (
-                                    <p className="has-text-left pt-2 is-size-7">
-                                      {project.date}
-                                    </p>
-                                  )}
+                            </Link>
+                            <div>
+                              <div className="project-tech-tags has-text pb-2">
+                                {project.categories &&
+                                  project.categories.map((cat, index) => (
+                                    <span className="tech-tag" key={index}>
+                                      {cat}
+                                    </span>
+                                  ))}
+                              </div>
+                              <div className="project-links">
+                                {project.date && (
+                                  <p className="has-text-left pt-2 is-size-7">
+                                    {project.date}
+                                  </p>
+                                )}
 
-                                  <div className="external-links">
-                                    {project.github && (
-                                      <Link href={project.github}>
-                                        <a className="icon has-text-light">
-                                          <FontAwesomeIcon icon={faFileCode} />
-                                        </a>
-                                      </Link>
-                                    )}
-                                    {project.url && (
-                                      <Link href={project.url}>
-                                        <a className="icon has-text-light">
-                                          <FontAwesomeIcon
-                                            icon={faExternalLinkAlt}
-                                          />
-                                        </a>
-                                      </Link>
-                                    )}
-                                  </div>
+                                <div className="external-links">
+                                  {project.github && (
+                                    <Link href={project.github}>
+                                      <a className="icon has-text-light">
+                                        <FontAwesomeIcon icon={faFileCode} />
+                                      </a>
+                                    </Link>
+                                  )}
+                                  {project.url && (
+                                    <Link href={project.url}>
+                                      <a className="icon has-text-light">
+                                        <FontAwesomeIcon
+                                          icon={faExternalLinkAlt}
+                                        />
+                                      </a>
+                                    </Link>
+                                  )}
                                 </div>
                               </div>
                             </div>
-                          </motion.div>
-                        </Link>
+                          </div>
+                        </motion.div>
                       </AnimateWhenVisible>
                     )
                 )}

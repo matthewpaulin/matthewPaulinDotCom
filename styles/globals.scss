@@ -348,7 +348,6 @@ section#projects {
     grid-template-columns: 1fr;
   }
   .grid-project {
-    cursor: pointer;
     max-width: 350px;
     position: relative;
     height: 400px;
@@ -366,7 +365,6 @@ section#projects {
     .project-info {
       height: 100%;
       width: 100%;
-      padding: 1rem;
       background: rgba(0, 0, 0, 0.7);
       position: absolute;
       display: flex;
@@ -380,6 +378,14 @@ section#projects {
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: space-evenly;
+      }
+      > div {
+        padding: 1rem;
+        &.project-description {
+          cursor: pointer;
+          flex: 1;
+          border-bottom: solid 1px white;
+        }
       }
     }
     button {
