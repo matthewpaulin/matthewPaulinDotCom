@@ -2,7 +2,7 @@ export default {
   title: "Whiteboards",
   id: "whiteboards",
   date: "2020",
-  url: "whiteboard.matthewpaulin.com",
+  url: "https://whiteboard.matthewpaulin.com",
   github: "https://github.com/TOHacks-Dev/whiteboard",
   description:
     "I made Whiteboards with some friends for TOHacks 2020 during the Covid-19 lockdown. \

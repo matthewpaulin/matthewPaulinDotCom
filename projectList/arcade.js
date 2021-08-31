@@ -2,7 +2,7 @@ export default {
   title: "Arcade Games",
   id: "arcade",
   date: "2016",
-  url: "arcade.matthewpaulin.com",
+  url: "https://arcade.matthewpaulin.com",
   github: "https://github.com/matthewpaulin/Arcade_Games",
   subtitle:
     "This game is actually 4-in-1 and includes clones of Snake, Tron, Missile Command, and Flappy Bird \
