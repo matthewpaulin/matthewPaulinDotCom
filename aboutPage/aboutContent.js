@@ -2,7 +2,7 @@ export default {
   education: {
     description: "Bachelor of Engineering, Software Engineering",
     date: "2018 - present",
-    gpa: "10.8 GPA (3.9)",
+    gpa: "10.75 GPA (3.85)",
   },
   experience: [
     {

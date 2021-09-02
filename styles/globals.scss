@@ -349,14 +349,14 @@ section#projects {
   gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
 
-  @media only screen and (max-width: $desktop) {
-    grid-template-columns: repeat(2, 350px);
+  @media only screen and (max-width: $widescreen) {
+    grid-template-columns: repeat(2, 1fr);
   }
   @media only screen and (max-width: $tablet) {
+    max-width: 425px;
     grid-template-columns: 1fr;
   }
   .grid-project {
-    max-width: 350px;
     position: relative;
     height: 400px;
     margin: auto;
@@ -532,11 +532,6 @@ button.is-outlined {
     height: 2.5rem;
     width: auto;
   }
-}
-.narrow-container {
-  max-width: $desktop + 1;
-  margin: auto;
-  padding: 0 1rem;
 }
 .has-background-purple {
   background: rgb(131, 58, 180);

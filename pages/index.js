@@ -128,7 +128,7 @@ export default function Home({ projects }) {
           </div>
         </section>
         <section id="projects" className="py-5">
-          <div className="narrow-container is-size-4 mb-6 section-title">
+          <div className="container is-size-4 mb-6 section-title">
             <hr />
             <span>Featured Projects</span>
             <hr />
@@ -220,7 +220,7 @@ export default function Home({ projects }) {
                   )
               )}
           </ul>
-          <ul id="featured-projects" className="narrow-container">
+          <ul id="featured-projects" className="container">
             {projects &&
               projects.map(
                 (project, idx) =>
@@ -317,12 +317,12 @@ export default function Home({ projects }) {
           </ul>
           {projects && projects.length > projectsToDisplay && (
             <>
-              <div className="narrow-container is-size-4 my-6 section-title">
+              <div className="container is-size-4 my-6 section-title">
                 <hr />
                 <span>Other Projects</span>
                 <hr />
               </div>
-              <div className="other-projects narrow-container">
+              <div className="other-projects container">
                 {projects.map(
                   (project, idx) =>
                     idx >= projectsToDisplay && (
