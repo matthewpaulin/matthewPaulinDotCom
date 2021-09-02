@@ -72,6 +72,7 @@ export default function Project({ project }) {
                 className="button mx-4 is-medium"
                 disabled={!project.github}
                 href={project.github || "#"}
+                target="_blank"
               >
                 <span className="icon">
                   <FontAwesomeIcon icon={faGithub} />
@@ -82,6 +83,7 @@ export default function Project({ project }) {
                 <a
                   className="button is-primary mx-4 is-medium"
                   href={project.url || "#"}
+                  target="_blank"
                 >
                   <span className="icon">
                     <FontAwesomeIcon icon={faPlay} />

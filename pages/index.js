@@ -108,14 +108,17 @@ export default function Home({ projects }) {
                 </a>
               </li>
               <li className="px-5">
-                <a href="https://github.com/matthewpaulin">
+                <a href="https://github.com/matthewpaulin" target="_blank">
                   <span className="icon is-large has-text-light glowing hero-icon">
                     <FontAwesomeIcon icon={faGithubSquare} />
                   </span>
                 </a>
               </li>
               <li className="px-5">
-                <a href="https://www.linkedin.com/in/matthew-paulin">
+                <a
+                  href="https://www.linkedin.com/in/matthew-paulin"
+                  target="_blank"
+                >
                   <span className="icon is-large has-text-light glowing hero-icon">
                     <FontAwesomeIcon icon={faLinkedin} />
                   </span>
@@ -125,7 +128,7 @@ export default function Home({ projects }) {
           </div>
         </section>
         <section id="projects" className="py-5">
-          <div className="narrow-container is-size-4 mb-6 is-family-monospace section-title">
+          <div className="narrow-container is-size-4 mb-6 section-title">
             <hr />
             <span>Featured Projects</span>
             <hr />
@@ -166,7 +169,7 @@ export default function Home({ projects }) {
                             <span className="icon has-text-light">
                               <FontAwesomeIcon icon={faTools} />
                             </span>
-                            <div className="project-tech-tags">
+                            <div className="project-tech-tags is-family-code">
                               {project.categories.map((cat, index) => (
                                 <span className="tech-tag" key={index}>
                                   {cat}
@@ -191,12 +194,14 @@ export default function Home({ projects }) {
                               <div className="external-links">
                                 <a
                                   href={project.github}
+                                  target="_blank"
                                   className="icon has-text-light"
                                 >
                                   <FontAwesomeIcon icon={faFileCode} />
                                 </a>
                                 <a
                                   href={project.url}
+                                  target="_blank"
                                   className="icon has-text-light"
                                 >
                                   <FontAwesomeIcon icon={faExternalLinkAlt} />
@@ -243,7 +248,7 @@ export default function Home({ projects }) {
                             />
                           )}
                         </div>
-                        <div className="project-info is-family-monospace has-text-light">
+                        <div className="project-info has-text-light">
                           <div className="project-title is-size-3 has-text-weight-medium">
                             {idx % 2 == 0 && project.date && (
                               <span className="has-text-left is-size-7 has-text-light">
@@ -268,7 +273,7 @@ export default function Home({ projects }) {
                             <span className="icon has-text-light">
                               <FontAwesomeIcon icon={faTools} />
                             </span>
-                            <div className="project-tech-tags">
+                            <div className="project-tech-tags is-family-code">
                               {project.categories.map((cat, index) => (
                                 <span className="tech-tag" key={index}>
                                   {cat}
@@ -287,16 +292,21 @@ export default function Home({ projects }) {
                             </Link>
 
                             <div className="external-links">
-                              <Link href={project.github}>
-                                <a className="icon has-text-light">
-                                  <FontAwesomeIcon icon={faFileCode} />
-                                </a>
-                              </Link>
-                              <Link href={project.url}>
-                                <a className="icon has-text-light">
-                                  <FontAwesomeIcon icon={faExternalLinkAlt} />
-                                </a>
-                              </Link>
+                              <a
+                                className="icon has-text-light"
+                                target="_blank"
+                                href={project.github}
+                              >
+                                <FontAwesomeIcon icon={faFileCode} />
+                              </a>
+
+                              <a
+                                href={project.url}
+                                className="icon has-text-light"
+                                target="_blank"
+                              >
+                                <FontAwesomeIcon icon={faExternalLinkAlt} />
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -307,7 +317,7 @@ export default function Home({ projects }) {
           </ul>
           {projects && projects.length > projectsToDisplay && (
             <>
-              <div className="narrow-container is-size-4 my-6 is-family-monospace section-title">
+              <div className="narrow-container is-size-4 my-6 section-title">
                 <hr />
                 <span>Other Projects</span>
                 <hr />
@@ -338,7 +348,7 @@ export default function Home({ projects }) {
                               />
                             )}
                           </div>
-                          <div className="project-info is-family-monospace has-text-light">
+                          <div className="project-info has-text-light">
                             <Link href={`/project/${project.slug}`}>
                               <div className="project-description">
                                 <div className="is-size-4">{project.title}</div>
@@ -346,7 +356,7 @@ export default function Home({ projects }) {
                               </div>
                             </Link>
                             <div>
-                              <div className="project-tech-tags has-text pb-2">
+                              <div className="project-tech-tags has-text pb-2 is-family-code">
                                 {project.categories &&
                                   project.categories.map((cat, index) => (
                                     <span className="tech-tag" key={index}>
@@ -363,20 +373,24 @@ export default function Home({ projects }) {
 
                                 <div className="external-links">
                                   {project.github && (
-                                    <Link href={project.github}>
-                                      <a className="icon has-text-light">
-                                        <FontAwesomeIcon icon={faFileCode} />
-                                      </a>
-                                    </Link>
+                                    <a
+                                      className="icon has-text-light"
+                                      href={project.github}
+                                      target="_blank"
+                                    >
+                                      <FontAwesomeIcon icon={faFileCode} />
+                                    </a>
                                   )}
                                   {project.url && (
-                                    <Link href={project.url}>
-                                      <a className="icon has-text-light">
-                                        <FontAwesomeIcon
-                                          icon={faExternalLinkAlt}
-                                        />
-                                      </a>
-                                    </Link>
+                                    <a
+                                      className="icon has-text-light"
+                                      href={project.url}
+                                      target="_blank"
+                                    >
+                                      <FontAwesomeIcon
+                                        icon={faExternalLinkAlt}
+                                      />
+                                    </a>
                                   )}
                                 </div>
                               </div>

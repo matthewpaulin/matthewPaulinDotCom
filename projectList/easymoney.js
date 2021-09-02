@@ -13,11 +13,12 @@ export default {
     This was achieved using a React front-end and connecting it to Google Firebase for storage and authentication. \
     As an additional feature I added a budgeting feature to create plans for my spending and hopefully stick to them.",
   subtitle:
-    "A responsive budgeting and expense tracking web application with authentication.",
+    "This is a responsive budgeting and expense tracking web application with authentication. Individual transactions \
+    can be associated with particular accounts or budgets.",
   slug: "easymoney",
   images: [],
   preview: {
-    url: "https://i.ibb.co/9t4PFXW/easymoney.png",
+    url: "https://i.ibb.co/tcjGgTB/em.png",
     alternativeText: "Easy Money Logo",
   },
   categories: ["React", "Firebase"],

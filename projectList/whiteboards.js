@@ -13,11 +13,13 @@ export default {
     and text insertion, multiple brushes, picture uploading, erasing, and others. I had a lot of fun creating \
     this project and the best part was that it was completed in a weekend, no procrastination required.",
   subtitle:
-    "A collaborative online whiteboard with drawing, shape creation, image uploading and more.",
+    "A collaborative online whiteboard with drawing, shape creation, image uploading and more. Each whiteboard is \
+    associated with a unique link and can be shared with many others. After logging in with Google, \
+    participants of a board can also chat with each other.",
   slug: "whiteboards",
   images: [],
   preview: {
-    url: "https://i.ibb.co/483jPnd/whiteboards.png",
+    url: "https://i.ibb.co/vmF4NDd/whiteboard.png",
     alternativeText: "Whiteboards Logo",
   },
   categories: ["Canvas API", "Firebase"],

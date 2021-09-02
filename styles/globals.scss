@@ -2,8 +2,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   height: 100%;
 }
 * {
@@ -205,6 +203,15 @@ section#projects {
     display: grid;
     grid-auto-flow: row dense;
     gap: 1rem;
+    .project-image {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+    }
     .project-title {
       border-bottom: solid 1px $light;
       display: flex;
@@ -218,18 +225,19 @@ section#projects {
       display: grid;
       gap: 1rem;
       .project-description {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         padding: 0.5em;
         background: #2c3e50;
         height: min-content;
         &.left {
           position: relative;
           left: 0;
-          width: 120%;
+          width: 115%;
         }
         &.right {
           position: relative;
-          left: -20%;
-          width: 120%;
+          left: -15%;
+          width: 115%;
         }
       }
       .project-links {
@@ -247,7 +255,7 @@ section#projects {
     }
     &.left-content {
       text-align: left;
-      grid-template-columns: 3fr 2fr;
+      grid-template-columns: 5fr 4fr;
       .project-image {
         text-align: right;
         grid-column: 2;
@@ -259,7 +267,7 @@ section#projects {
 
     &.right-content {
       text-align: right;
-      grid-template-columns: 2fr 3fr;
+      grid-template-columns: 5fr 4fr;
       .project-image {
         text-align: left;
         grid-column: 1;

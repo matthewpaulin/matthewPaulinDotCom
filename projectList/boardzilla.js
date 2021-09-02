@@ -3,7 +3,7 @@ export default {
   id: "boardzilla",
   date: "2021",
   url: "https://boardzilla.matthewpaulin.com",
-  github: "https://github.com/3A04-T2G10/Boardzilla",
+  github: "https://github.com/matthewpaulin/Boardzilla",
   description:
     "Boardzilla is an online application that serves as a dashboard for a variety of \
     information meant to serve as a daily briefing or hub.  Each user has their own protected \
@@ -15,11 +15,12 @@ export default {
     This application was created with the MERN stack and express-session authentication was implemented\
     with Passport.js. On the front-end, I used React with Redux to create a responsive and attractive user interface.",
   subtitle:
-    "Boardzilla is an app to create personalized dashboards constructed with a variety of customizable widgets.",
+    "Boardzilla is an online app to create personalized dashboards with a variety of customizable widgets. \
+    In addition to a calendar to track events, users can add a weather, stock price, news, or sticky notes widget.",
   slug: "boardzilla",
   images: [],
   preview: {
-    url: "https://i.ibb.co/ByDrHVL/logo.png",
+    url: "https://i.ibb.co/bbZMCmJ/boardzilla.png",
     alternativeText: "boardzilla logo",
   },
   categories: ["MongoDB", "Express.js", "React", "Redux", "Node.js"],
